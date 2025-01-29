@@ -1,4 +1,4 @@
-export interface megaEpicFortress {
+export interface epicFortress {
     name: string;
     location: Location;
     defenses: Defenses;
@@ -14,7 +14,7 @@ interface Founded {
     year: number
     by: string
 }
-interface MajorEvents{
+interface MajorEvents {
     year: number
     event: string
     outcome: string
@@ -24,16 +24,16 @@ interface Resources {
     armory: Armory
 }
 interface Armory {
-        weapons: Weapons[]
-        shields: Shields[]
+    weapons: Weapons[]
+    shields: Shields[]
 }
-interface Weapons {
+export interface Weapons {
     type: string
     quantity: number
 }
 interface Shields {
     type: string
-    quantity: number 
+    quantity: number
 }
 interface Storages {
     food: Food
@@ -57,14 +57,14 @@ interface Inhabitants {
 interface Roles {
     role: string
     count: number
-    equipment: WarriorEquitment | MageEquipment
+    equipment: WarriorEquitment | MageEquipment | Professions[]
 }
 interface WarriorEquitment {
     weapon: string
     armor: string
     shield: string
 }
-interface MageEquipment{
+interface MageEquipment {
     staff: string
     robe: string
     amulet: string
@@ -90,7 +90,7 @@ interface Defenses {
     walls: Walls
     towers: Towers[]
 }
-interface Towers {
+export interface Towers {
     name: string
     height: number
     armament: Armament
