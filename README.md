@@ -48,5 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-# Aldatz-Frutos-intcli2425
 # Aldatz-Frutos-RECU-intcli2425
