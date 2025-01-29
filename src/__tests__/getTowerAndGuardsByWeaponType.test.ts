@@ -1,13 +1,18 @@
 import { getTowersAndGuardsByWeaponType } from "../helpers/getTowersAndGuardsByWeaponType";
 import { megaEpicFortress } from "../data/data";
 
-describe('Get the towers and their guards', () => {
-	it('should get correcty all the tower if they have Arcane Cannon in their armament', () => {
+describe("Get the towers and their guards", () => {
+    it("should correctly get all towers with 'Arcane Cannon' in their armament", () => {
+        const result = getTowersAndGuardsByWeaponType(megaEpicFortress, "Arcane Cannon");
 
-		const result = getTowersAndGuardsByWeaponType(megaEpicFortress, "Arcane Cannon")
+        expect(result).toEqual([
+            ["Tower of Silence", "Eryndor the Silent", "Kael the Shadow"],
+            ["Tower of Realm", "Jacob the Arcane", "Molio the Dog"]
+        ]);
+    });
 
-        expect(result[0][0] + ", " + result[0][1]  + ", " + result[0][2] ).toBe("Tower of Silence, Eryndor the Silent, Kael the Shadow");
-        expect(result[1][0] + ", " + result[1][1]  + ", " + result[1][2] ).toBe("Tower of Realm, Jacob the Arcane, Molio the Dog");
-        expect(result[2]).toBe(undefined);
-	})
-})
+    it("should return an empty array if no towers have the specified weapon", () => {
+        const result = getTowersAndGuardsByWeaponType(megaEpicFortress, "Nonexistent Weapon");
+        expect(result).toEqual([]);
+    });
+});
