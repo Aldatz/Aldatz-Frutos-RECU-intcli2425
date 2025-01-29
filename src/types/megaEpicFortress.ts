@@ -50,26 +50,26 @@ interface Water {
     capacity: number
     unit: string
 }
-interface Inhabitants {
+export interface Inhabitants {
     population: number
     roles: Roles[]
 }
-interface Roles {
+export interface Roles {
     role: string
     count: number
-    equipment: WarriorEquitment | MageEquipment | Professions[]
+    professions: Professions[]
 }
-interface WarriorEquitment {
-    weapon: string
-    armor: string
-    shield: string
-}
-interface MageEquipment {
-    staff: string
-    robe: string
-    amulet: string
-}
-interface Professions {
+// interface WarriorEquitment {
+//     weapon: string
+//     armor: string
+//     shield: string
+// }
+// interface MageEquipment {
+//     staff: string
+//     robe: string
+//     amulet: string
+// }
+export interface Professions {
     type: string
     count: number
 }

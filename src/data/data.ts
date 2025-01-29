@@ -190,28 +190,28 @@ export const megaEpicFortress: epicFortress = {
 	inhabitants: {
 		population: 1000,
 		roles: [
-			{
-				role: "Soldier",
-				count: 300,
-				equipment: {
-					weapon: "Longsword",
-					armor: "Steel Plate",
-					shield: "Tower Shield",
-				},
-			},
-			{
-				role: "Mage",
-				count: 100,
-				equipment: {
-					staff: "Crystal Wand",
-					robe: "Enchanted Robes",
-					amulet: "Amulet of Wisdom",
-				},
-			},
+			// {
+			// 	role: "Soldier",
+			// 	count: 300,
+			// 	equipment: {
+			// 		weapon: "Longsword",
+			// 		armor: "Steel Plate",
+			// 		shield: "Tower Shield",
+			// 	},
+			// },
+			// {
+			// 	role: "Mage",
+			// 	count: 100,
+			// 	equipment: {
+			// 		staff: "Crystal Wand",
+			// 		robe: "Enchanted Robes",
+			// 		amulet: "Amulet of Wisdom",
+			// 	},
+			// },
 			{
 				role: "Villager",
 				count: 600,
-				equipment: [
+				professions: [
 					{ 
 						type: "Farmer", 
 						count: 467 
