@@ -5,9 +5,9 @@ import { Towers } from '../types/megaEpicFortress'
 interface DropDownProps {
 }
 
-const DropDown: React.FC<DropDownProps> = ({}) => {
+const DropDown: React.FC<DropDownProps> = ({ }) => {
 
-const tower = megaEpicFortress.defenses.towers
+    const tower = megaEpicFortress.defenses.towers
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
@@ -23,16 +23,17 @@ const tower = megaEpicFortress.defenses.towers
                 <div className="py-1">
                     {tower.map((tower: Towers, towerIndex) => (
                         <MenuItem
-                        key={towerIndex}>
-                        <a
-                            // onClick={}
-                            className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                        >
-                            {tower.armament.weaponType}
-                        </a>
-                    </MenuItem>
+                            key={towerIndex}>
+                            <a
+                                // onClick={}
+                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                            >
+                                {tower.armament.weaponType}
+
+                            </a>
+                        </MenuItem>
                     ))}
-                    
+
                 </div>
             </MenuItems>
         </Menu>
