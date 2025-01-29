@@ -11,7 +11,6 @@ function App() {
   const getVillagers = () => {
     const villagers = countBillagerByProfesion(megaEpicFortress)
     setVillagers(villagers)
-
   };
 
   return (
